@@ -1,0 +1,412 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  paddin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f4f4f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  height: 44px;
+  background-color: #fff;
+  border-bottom: 3px solid #2d3d51; }
+
+/* logo in header(mobile version) and side-nav (tablet & desktop) */
+.logo {
+  height: 44px;
+  padding: 10px;
+  font-weight: 700; }
+
+.side-nav .logo {
+  background-color: #233245;
+  color: #fff; }
+
+.header .logo {
+  float: left;
+  height: 44px;
+  z-index: 1;
+  padding: 10px;
+  font-weight: 700;
+  color: #233245; }
+
+.logo i {
+  font-size: 22px; }
+
+.logo span {
+  margin-left: 5px;
+  text-transform: uppercase; }
+
+/* side navigation styles */
+.side-nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #35475e;
+  z-index: 1;
+  display: none; }
+  .side-nav.visible {
+    display: block; }
+  .side-nav li:hover {
+    background: #d5dae5;
+    transition: all 0.3s ease; }
+  .side-nav ul {
+    margin: 0;
+    padding: 0; }
+    .side-nav ul li {
+      padding: 16px 16px;
+      border-bottom: 1px solid #3c506a;
+      position: relative; }
+      .side-nav ul li.active:before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fff; }
+      .side-nav ul li a {
+        color: #fff;
+        display: block;
+        text-decoration: none; }
+      .side-nav ul li i {
+        color: #0497df;
+        min-width: 20px;
+        text-align: center; }
+      .side-nav ul li span:nth-child(2) {
+        margin-left: 10px;
+        font-size: 14px;
+        font-weight: 600; }
+
+/* main content styles */
+.main-content {
+  padding: 40px;
+  margin-top: 0;
+  padding: 0;
+  padding-top: 44px;
+  height: 100%;
+  overflow: scroll; }
+  .main-content .title {
+    background-color: #eef1f7;
+    border-bottom: 1px solid #b8bec9;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #333;
+    font-size: 18px; }
+  .main-content .main {
+    margin: 70px 90px; }
+    .main-content .main .needs-validation {
+      margin: 50px auto; }
+      .main-content .main .needs-validation h3 {
+        text-align: center; }
+    .main-content .main .form-row {
+      margin: 40px; }
+    .main-content .main .col-md-6 {
+      margin: 50px auto; }
+    .main-content .main .btn {
+      display: block;
+      width: 100%;
+      float: right;
+      background: none;
+      border: 2px solid #35475e;
+      padding: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 12px 0; }
+      .main-content .main .btn:hover {
+        background: #eef1f7; }
+    .main-content .main .table-row .btn {
+      font-size: 10px;
+      display: inline-block; }
+    .main-content .main .table-row .btn .btn-outline-danger {
+      border: 1px solid red; }
+    .main-content .main .table-row #delete {
+      display: inline; }
+
+÷
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+  ÷
+.container h3 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center; }
+    ÷
+.container h3 small {
+      font-size: 0.5em; }
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px; }
+
+.responsive-table .table-header {
+  background-color: #eef1f7;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em; }
+
+.responsive-table .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1); }
+
+.responsive-table .col-1 {
+  flex-basis: 25%;
+  margin-left: 10px; }
+
+.responsive-table .col-2 {
+  flex-basis: 40%; }
+
+.responsive-table .col-3 {
+  flex-basis: 25%; }
+
+.responsive-table .col-4 {
+  flex-basis: 25%; }
+
+.responsive-table .col-5 {
+  flex-basis: 5%; }
+
+@media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none; }
+  .responsive-table li {
+    display: block; }
+  .responsive-table .col {
+    flex-basis: 100%; }
+  .responsive-table .col {
+    display: flex;
+    padding: 10px 0; }
+    .responsive-table .col:before {
+      color: #6C7A89;
+      padding-right: 10px;
+      content: attr(data-label);
+      flex-basis: 50%;
+      text-align: right; } }
+
+/* main box container */
+@media screen and (min-width: 1171px) {
+  .header {
+    background-color: #35475e;
+    z-index: 1; }
+  .nav-trigger {
+    display: none; }
+    .nav-trigger span {
+      background-color: #fff; }
+      .nav-trigger span:before {
+        background-color: #fff; }
+  span:after {
+    background-color: #fff; }
+  .side-nav {
+    display: block;
+    width: 250px; }
+    .side-nav ul li span:nth-child(2) {
+      display: inline-block; }
+    .side-nav ul li i {
+      font-size: 16px; }
+    .side-nav ul li a {
+      text-align: left; }
+  .main-content {
+    margin-left: 250px; }
+  .main {
+    grid-template-columns: repeat(4, 1fr); }
+  .main-two {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .header {
+    background-color: #35475e;
+    z-index: 1; }
+  .nav-trigger {
+    display: none; }
+    .nav-trigger span {
+      background-color: #fff; }
+      .nav-trigger span:before {
+        background-color: #fff; }
+  span:after {
+    background-color: #fff; }
+  .side-nav {
+    display: inline-block;
+    width: 200px; }
+    .side-nav ul li span:nth-child(2) {
+      display: inline-block;
+      font-size: 16px; }
+    .side-nav ul li i {
+      font-size: 16px; }
+    .side-nav ul li a {
+      text-align: left; }
+  .main-content {
+    margin-left: 200px; }
+  .main {
+    grid-template-areas: 'sales1 sales2' 'sales3 sales4';
+    grid-template-columns: repeat(2, 1fr); }
+  .main-two {
+    align-items: center;
+    grid-template-areas: 'analytics' 'topStation';
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .main-two .topStation {
+      margin: 0 auto;
+      margin-bottom: 15px; } }
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .header {
+    background-color: #35475e;
+    z-index: 1; }
+    .header .logo {
+      display: none; }
+  .nav-trigger {
+    display: none; }
+    .nav-trigger span {
+      background-color: #fff; }
+      .nav-trigger span:before {
+        background-color: #fff; }
+  span:after {
+    background-color: #fff; }
+  .side-nav {
+    display: block;
+    width: 70px;
+    z-index: 2; }
+    .side-nav ul li span:nth-child(2) {
+      display: none; }
+    .side-nav .logo i {
+      padding-left: 12px; }
+    .side-nav .logo span {
+      display: none; }
+    .side-nav ul li i {
+      font-size: 26px; }
+    .side-nav ul li a {
+      text-align: center; }
+  .main-content {
+    margin-left: 70px; }
+  .main {
+    grid-template-areas: 'sales1 sales2' 'sales3 sales4';
+    grid-template-columns: repeat(2, 1fr); }
+  .main-two {
+    align-items: center;
+    grid-template-areas: 'analytics' 'topStation';
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .main-two .topStation {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15px; } }
+
+@media screen and (max-width: 500px) {
+  .header {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 44px;
+    background-color: #fff;
+    border-bottom: 3px solid #2d3d51; }
+  /* logo in header(mobile version) and side-nav (tablet & desktop) */
+  .logo {
+    height: 44px;
+    padding: 10px;
+    font-weight: 700; }
+  .header .logo {
+    color: #233245; }
+  .side-nav .logo {
+    background-color: #233245;
+    color: #fff; }
+  .header .logo {
+    float: left;
+    height: 44px;
+    z-index: 1;
+    padding: 10px;
+    font-weight: 700;
+    color: #233245; }
+  .logo i {
+    font-size: 22px; }
+  .logo span {
+    margin-left: 5px;
+    text-transform: uppercase; }
+  .nav-trigger {
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 44px;
+    right: 30px;
+    display: block; }
+    .nav-trigger span {
+      width: 20px;
+      height: 2px;
+      background-color: #35475e;
+      position: absolute; }
+      .nav-trigger span:before {
+        width: 20px;
+        height: 2px;
+        background-color: #35475e;
+        position: absolute; }
+  span:after {
+    width: 20px;
+    height: 2px;
+    background-color: #35475e;
+    position: absolute; }
+  .nav-trigger span {
+    top: 50%; }
+    .nav-trigger span:before, .nav-trigger span:after {
+      content: ''; }
+    .nav-trigger span:before {
+      top: -6px; }
+    .nav-trigger span:after {
+      top: 6px; }
+  /* side navigation styles */
+  .side-nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #35475e;
+    z-index: 1;
+    display: none; }
+    .side-nav.visible {
+      display: block; }
+    .side-nav li:hover {
+      background: #d5dae5;
+      transition: all 0.3s ease; }
+    .side-nav ul {
+      margin: 0;
+      padding: 0; }
+      .side-nav ul li {
+        padding: 16px 16px;
+        border-bottom: 1px solid #3c506a;
+        position: relative; }
+        .side-nav ul li.active:before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #fff; }
+        .side-nav ul li a {
+          color: #fff;
+          display: block;
+          text-decoration: none; }
+        .side-nav ul li i {
+          color: #0497df;
+          min-width: 20px;
+          text-align: center; }
+        .side-nav ul li span:nth-child(2) {
+          margin-left: 10px;
+          font-size: 14px;
+          font-weight: 600; }
+  .main {
+    margin-right: 15px;
+    grid-template-areas: 'sales1' 'sales2' 'sales3' 'sales4';
+    grid-template-columns: 1fr; }
+  .main-two {
+    grid-template-areas: 'analytics' 'topStation';
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .main-two .topStation {
+      width: 100%; } }

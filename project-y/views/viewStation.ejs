@@ -1,0 +1,54 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/admin.css">
+
+<div class="main-content">
+  <div class="title">
+    Admin
+  </div>
+
+  <div class="main">
+      <div class="container">
+        <ul class="responsive-table">
+          <h3>Added Stations</h3>
+            <br>
+          <li class="table-header">
+            <div class="col col-1">Manager</div>
+            <div class="col col-2">Address</div>
+            <div class="col col-3">Number Of Tanks</div>
+            <div class="col col-4">Price Per Litre</div>
+            <div class="col col-5"></div>
+            <div class="col col-5"></div>
+            <% viewStation.forEach(function(station){ %>
+          </li>
+          <li class="table-row">
+            <div class="col col-1" data-label="Manager"><%= station.managerName %></div>
+            <div class="col col-2" data-label="Address"><%= station.address %></div>
+            <div class="col col-3" data-label="Tanks"><%= station.numberOfTanks %></div>
+            <div class="col col-4" data-label="Price"><%= station.pricePerLitre %></div>
+            <div class="col col-5">
+              <a class="btn btn-outline-danger" href="/viewStation/<%= station._id %>/edit">EDIT</a>
+               <form id="delete" action="/viewStation/<%= station._id %>?_method=DELETE" method="post">
+                <button class="btn btn-outline-dark">DELETE</button>
+              </form>
+              <!-- <a href="/viewStation/<%= station._id %>">Read more</a> -->
+            </div>
+          </li>
+          <% }); %>
+
+          <a href="/viewStation/new">
+            <input class="btn" type="submit" value="Add New Stations">
+          </a>
+        </ul>
+
+
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+  <% include partials/footer %>

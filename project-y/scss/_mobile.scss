@@ -1,0 +1,342 @@
+// wide screens
+@include mediaXl{
+
+  .header {
+    background-color: #35475e;
+    z-index: 1;
+  }
+  .nav-trigger {
+    display: none;
+    span {
+      background-color: #fff;
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+  span:after {
+    background-color: #fff;
+  }
+  .side-nav {
+    display: block;
+    width: 250px;
+    ul li {
+      span:nth-child(2) {
+        display: inline-block;
+      }
+      i {
+        font-size: 16px;
+      }
+      a {
+        text-align: left;
+      }
+    }
+  }
+  .main-content {
+    margin-left: 250px;
+  }
+
+  .main{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-two{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+//Desktop & laptops
+@include mediaLg{
+  .header {
+      background-color: #35475e;
+      z-index: 1;
+    }
+    .nav-trigger {
+      display: none;
+      span {
+        background-color: #fff;
+        &:before {
+          background-color: #fff;
+        }
+      }
+    }
+
+    span:after {
+        background-color: #fff;
+      }
+      .side-nav {
+        display: inline-block;
+        width: 200px;
+        ul li {
+          span:nth-child(2) {
+            display: inline-block;
+            font-size: 16px;
+          }
+          i {
+            font-size: 16px;
+          }
+          a {
+            text-align: left;
+          }
+        }
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+
+  .main{
+    grid-template-areas:
+    'sales1 sales2'
+    'sales3 sales4';
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-two{
+    align-items: center;
+    .topStation{
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    grid-template-areas:
+    'analytics'
+    'topStation';
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  }
+}
+
+// //Tablets & small laptops
+@include mediaMd{
+  .header {
+    background-color: #35475e;
+    z-index: 1;
+    .logo {
+      display: none;
+    }
+  }
+  .nav-trigger {
+    display: none;
+    span {
+      background-color: #fff;
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+  span:after {
+    background-color: #fff;
+  }
+  .side-nav {
+    display: block;
+    width: 70px;
+    z-index: 2;
+    ul li span:nth-child(2) {
+      display: none;
+    }
+    .logo {
+      i {
+        padding-left: 12px;
+      }
+      span {
+        display: none;
+      }
+    }
+    ul li {
+      i {
+        font-size: 26px;
+      }
+      a {
+        text-align: center;
+      }
+    }
+  }
+  .main-content {
+    margin-left: 70px;
+  }
+
+  .main{
+    grid-template-areas:
+    'sales1 sales2'
+    'sales3 sales4';
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-two{
+    align-items: center;
+    .topStation{
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    grid-template-areas:
+    'analytics'
+    'topStation';
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  }
+}
+
+//TODO: the side nav is there fix it
+//mobile phones
+@include mediaSm{
+  .header {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 44px;
+    background-color: #fff;
+    border-bottom: 3px solid #2d3d51;
+  }
+
+  /* logo in header(mobile version) and side-nav (tablet & desktop) */
+
+  .logo {
+    height: 44px;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .header .logo {
+    color: #233245;
+  }
+
+  .side-nav .logo {
+    background-color: #233245;
+    color: #fff;
+  }
+
+  .header .logo {
+    float: left;
+    height: 44px;
+    z-index: 1;
+    padding: 10px;
+    font-weight: 700;
+    color: #233245;
+  }
+
+  .logo {
+    i {
+      font-size: 22px;
+    }
+    span {
+      margin-left: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  .nav-trigger {
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 44px;
+    right: 30px;
+    display: block;
+    span {
+      width: 20px;
+      height: 2px;
+      background-color: #35475e;
+      position: absolute;
+      &:before {
+        width: 20px;
+        height: 2px;
+        background-color: #35475e;
+        position: absolute;
+      }
+    }
+  }
+
+  span:after {
+    width: 20px;
+    height: 2px;
+    background-color: #35475e;
+    position: absolute;
+  }
+
+  .nav-trigger span {
+    top: 50%;
+    &:before, &:after {
+      content: '';
+    }
+    &:before {
+      top: -6px;
+    }
+    &:after {
+      top: 6px;
+    }
+  }
+
+  /* side navigation styles */
+
+  .side-nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #35475e;
+    z-index: 1;
+    display: none;
+    &.visible {
+      display: block;
+    }
+    li:hover {
+      background: #d5dae5;
+      transition: all 0.3s ease;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 16px 16px;
+        border-bottom: 1px solid #3c506a;
+        position: relative;
+        &.active:before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #fff;
+        }
+        a {
+          color: #fff;
+          display: block;
+          text-decoration: none;
+        }
+        i {
+          color: #0497df;
+          min-width: 20px;
+          text-align: center;
+        }
+        span:nth-child(2) {
+          margin-left: 10px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .main {
+      margin-right: 15px;
+      grid-template-areas:
+      'sales1'
+      'sales2'
+      'sales3'
+      'sales4';
+
+      grid-template-columns: 1fr;
+    }
+
+    .main-two{
+      grid-template-areas:
+      'analytics'
+      'topStation';
+
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+      .topStation{
+        width: 100%;
+      }
+    }
+}

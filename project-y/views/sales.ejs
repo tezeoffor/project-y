@@ -1,0 +1,175 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/sales.css">
+
+<div class="main-content">
+    <div class="title">
+      Sales
+    </div>
+
+
+    <div class="main">
+      <div class=" sales sales1">
+        <div class="title">Todays Sale</div>
+        <div class="chart">$30,000</div>
+      </div>
+      <div class="sales sales2">
+        <div class="title">Yesterdays Sale</div>
+        <div class="chart">$28,000</div>
+      </div>
+      <div class="sales sales3">
+        <div class="title">Last 7 days Sale</div>
+        <div class="chart">$120,000</div>
+      </div>
+      <div class="sales sales4">
+        <div class="title">Last 30 days Sale</div>
+        <div class="chart">$480,000</div>
+      </div>
+    </div>
+
+<% viewStation.forEach(function(station){ %>
+    <!-- Each stations -->
+    <div class="stationsSale">
+      <div class="stationsView">
+        <div class="stationInfo">
+          <h3><%= station.managerName %></h3>
+          <hr>
+          <p><%= station.managerName %></p>
+          <p><%= station.address %></p>
+        </div>
+
+        <div class="sales eachStation">
+          <div class="title">Today Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Yesterday Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 7 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 30 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+
+      </div>
+    </div>
+    <% }) %>
+
+
+    <!-- new station -->
+    <!-- <div class="stationsSale">
+      <div class="stationsView">
+        <div class="stationInfo widget">
+          <h3>ABUJA STATION</h3>
+          <hr>
+          <p>Abful Rufai</p>
+          <p>Opposite CBN road</p>
+        </div>
+
+        <div class="sales eachStation">
+          <div class="title">Today Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Yesterday Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 7 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 30 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+
+      </div>
+    </div> -->
+
+
+
+    <!-- new station -->
+    <!-- <div class="stationsSale">
+      <div class="stationsView">
+        <div class="stationInfo widget">
+          <h3>ABUJA STATION</h3>
+          <hr>
+          <p>Abful Rufai</p>
+          <p>Opposite CBN road</p>
+        </div>
+
+        <div class="sales eachStation">
+          <div class="title">Today Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Yesterday Sales</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 7 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+        <div class="sales eachStation">
+          <div class="title">Last 30 days Sale</div>
+
+          <div class="amountMade">$480,000</div>
+          <div class="title litres">Litres sold</div>
+
+          <div class="litresSold">1,000L</div>
+        </div>
+
+      </div>
+    </div> -->
+
+
+  </div>
+
+  <% include partials/footer %>

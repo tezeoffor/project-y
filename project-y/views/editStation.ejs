@@ -1,0 +1,68 @@
+<% include partials/header %>
+  <link rel="stylesheet" href="/css/admin.css">
+
+<div class="main-content">
+    <div class="title">
+      Admin
+    </div>
+
+    <div class="main">
+
+      <form action="/viewStation/<%= station._id %>?_method=PUT" method="post" class="needs-validation" novalidate>
+        <h3>Edit Station</h3>
+        <div class="">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">Manager name</label>
+            <input type="text" class="form-control" value="<%=station.managerName%>" name="managerName" required>
+            <div class="invalid-feedback">
+              Please provide a manager name.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Address</label>
+            <input type="text" class="form-control" value="<%= station.address%>" name="address" required>
+            <div class="invalid-feedback">
+              Please provide a valid address.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">Number of tanks</label>
+            <select class="form-control" name="tanks" value="<%= station.numberOfTanks%>" required>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid number of tanks
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom04">Price per litre</label>
+            <input type="number" class="form-control" value="<%= station.pricePerLitre%>" name="price" required>
+            <div class="invalid-feedback">
+              Please provide a valid price per litre.
+            </div>
+
+            <input class="btn" type="submit" value="Next page">
+          </div>
+        </div>
+      </form>
+
+
+  </div>
+</div>
+
+
+<% include partials/footer %>

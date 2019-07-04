@@ -1,0 +1,224 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/stations.css">
+
+<div class="main-content">
+  <div class="title">
+    Stations
+  </div>
+
+<% viewStation.forEach(function(station){ %>
+  <div class="main">
+    <div class="station-content">
+      <!-- <div class="stationsView"> -->
+      <div class="active-status">
+        <button type="button" class="btn btn-success">Active</button>
+      </div>
+
+        <div class="station-detail">
+          <p><strong><%= station.managerName %></strong></p>
+          <p><%= station.address %></p>
+          <p>12 pumps</p>
+        </div>
+
+        <div class="station-update">
+          19/02/2019 4:10pm
+        </div>
+
+
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <!-- new station -->
+      <!-- <div class="station-content">
+        <div class="active-status">
+          <button type="button" class="btn btn-success">Active</button>
+        </div>
+        <div class="station-detail">
+          <p>Godswill Road, HQ, Abuja
+            <br> Abdul Rufai
+            <br> 12 pumps
+          </p>
+        </div>
+        <div class="station-update">
+          19/02/2019 4:10pm
+        </div>
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- new station -->
+      <!-- <div class="station-content">
+        <div class="active-status">
+          <button type="button" class="btn btn-success">Active</button>
+        </div>
+        <div class="station-detail">
+          <p>Godswill Road, HQ, Abuja
+            <br> Abdul Rufai
+            <br> 12 pumps
+          </p>
+        </div>
+        <div class="station-update">
+          19/02/2019 4:10pm
+        </div>
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+        <div class="view-tanks">
+          <svg class="tanks-view"><use href="#station-tanks"></use></svg>
+          <div class="tanks-info">
+            <span class="product-type">PETROL</span>
+            <br>
+            <span class="gross-volume">Gross volume : 22,919 L </span>
+            <br>
+            <span class="net-volume">Net volume : 23,000 L</span>
+            <br>
+            <span class="tank-temperature">Temperature : 22 degrees</span>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+    <% }) %>
+  </div>
+
+  <svg width="0px" height = "0px" viewBox = "45 45 50 50">
+    <symbol id="station-tanks">
+      <circle r="40" cx="50" cy="50" fill="#fff" stroke="black" stroke-width="0.2" />
+    </symbol>
+  </svg>
+
+  <% include partials/footer %>
