@@ -7,13 +7,13 @@ var express                = require("express"),
     LocalStrategy          = require("passport-local"),
     passportLocalMongoose  = require("passport-local-mongoose");
     User                   = require("./models/user");
-    // Station                = require("./models/station");
+    Station                = require("./models/station");
 
 // requiring routes
 var stationRoutes          = require("./routes/station"),
     authRoutes             = require("./routes/index");
 
-mongoose.connect("mongodb://localhost:/station", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:/station_management", { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -38,4 +38,4 @@ app.use(authRoutes);
 //LISTENER
 const PORT = process.env.PORT || 3000;
 var server = app.listen(PORT, () => console
-  .log(`project-x listening on port ${PORT} !`));
+  .log(`project-y listening on port ${PORT} !`));

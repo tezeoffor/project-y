@@ -1,45 +1,48 @@
 var express     = require("express");
+var mongoose    = require("mongoose").set("debug", true);
 var router      = express.Router();
-var Station     = require("../models/station");
 var User        = require("../models/user");
+var Station     = require("../models/station");
 
 
 // TODO: for showing the number of tank you have to check the id and print the number of tanK
 // STATION ROUTE
 router.get("/stations", isLoggedIn, function(req, res){
-  Station.find({}, function(err, allStations){
+  User.findById(req.user._id).populate("stations").exec((err, foundUser) =>{
     if(err){
       console.log(err);
     }else{
-      res.render("stations" ,{viewStation:allStations});
+      res.render("stations" ,{viewStation:foundUser.stations});
     }
   })
-});
+
+  })
 
 // SALES ROUTE
 router.get("/sales", isLoggedIn, function(req, res){
-  Station.find({}, function(err, allStations){
+  User.findById(req.user._id).populate("stations").exec((err, foundUser) =>{
     if(err){
       console.log(err);
     }else{
-      res.render("sales" ,{viewStation:allStations});
+      res.render("sales" ,{viewStation:foundUser.stations});
     }
   })
 });
 
+// VIEW ADDED STATIONS
 router.get("/viewStation", isLoggedIn, function(req, res){
-  Station.find({}, function(err, allStations){
+  User.findById(req.user._id).populate("stations").exec((err, foundUser) =>{
     if(err){
       console.log(err);
     }else{
-      res.render("viewStation" ,{viewStation:allStations});
+      res.render("viewStation" ,{viewStation:foundUser.stations});
     }
   })
 });
 
 // CREATE ROUTE
 router.post("/viewStation", isLoggedIn, function(req, res){
-  User.findById(req.user_id, function(err, foundUser){
+  User.findById(req.user._id, function(err, foundUser){
     if (err) {
       console.log(err);
     }

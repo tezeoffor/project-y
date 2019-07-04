@@ -7,13 +7,7 @@ var stationSchema = new mongoose.Schema({
   address: String,
   numberOfTanks: String,
   pricePerLitre: String,
-  // user: {
-  //   id: {
-  //     type:mongoose.Schema.Types.ObjectId,
-  //     ref: "user"
-  //   },
-  //   username: String
-  // }
+  
 });
 
 module.exports = mongoose.model("Station", stationSchema);
